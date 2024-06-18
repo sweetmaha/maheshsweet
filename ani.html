@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #hello{
+            border: 2px solid black;
+        }
+        #ball{
+            background: red;
+            width: 150px;
+            height: 150px;
+            position: relative;
+            border-radius: 150px;
+            
+        }
+        #square{
+            background: rgb(145, 32, 139);
+            width: 150px;
+            height: 150px;
+            position: relative;
+            border-radius: 150px;
+            
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div id="hello" style="height:600px;width:600px;">
+    <div id="ball"></div>
+    <div id="square"></div>
+</div> <br> <br>
+    <button onclick="box()">click</button>
+    <script>
+        var interval=null
+        function box(){
+            var circle=document.getElementById("ball");
+            var position=0;
+            interval =setInterval(frame,3)
+            function frame(){
+                if (position==500){
+                    clearInterval()
+                }
+                else{
+                    position++;
+                    circle.style.left=position+'px';
+                    circle.style.top=position+'px';
+                    // circle.style.right=position +'px';
+
+                }
+            }
+        }
+        var interval=null
+        function box(){
+            var circle=document.getElementById("square");
+            var position=0;
+            interval =setInterval(frame,3)
+            function frame(){
+                if (position==500){
+                    clearInterval()
+                }
+                else{
+                    position++;
+                    circle.style.right
+                    =position+'px';
+                    circle.style.bottom=position+'px';
+                    // circle.style.right=position +'px';
+
+                }
+            }
+        }
+        <!-- <button onmouseleave="mall()">mall</button>
+    <script>
+        function mall(){
+            alert("i am hero");
+        }
+    </script> -->
+ <p>jai iam king</p>
+<h1>wow how is this</h1>
+<button>height</button>
+<script>
+    $(document).ready(function()
+{
+    // $("button").click(function(){
+        $("p").unload(function(){
+            alert("no move")
+        })
+    })
+
+
+<!-- </script> --> 
+<!-- <input type="text">  <br><br>
+<button id="add">+</button>  
+<button id="remove" >-</button>
+<ul></ul> 
+<script>
+    $(document).ready(function(){
+        $('#add').click(function(){
+            var a=$('input').val()
+            $('ul').append('<li>'+a+'</li>')
+        })
+        $('#remove').click(function(){
+            $('li').last().remove()
+        })
+    })
+</script>    -->
+    
+    
+    
+</body>
+</html>

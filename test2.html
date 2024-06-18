@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #doll {
+        border: 2px solid black;
+        background-color: burlywood;
+    }
+
+    #circle {
+        background-color: aquamarine;
+        height: 150px;
+        width: 150px;
+        position: relative;
+        border-radius: 150px;
+        margin-bottom: 15px;
+    }
+</style>
+
+<body>
+    <div id="doll" style="height: 500px;width: 90%;">
+        <div id="circle">
+        </div>
+    </div> <br>
+    <button onclick="go()">submit</button>
+    <script>
+        var interval = null
+        function go() {
+            var circle = document.getElementById("circle");
+            var position = 0;
+            var bottom = 500;
+            interval = setInterval(frame, 1)
+            function frame() {
+                if (position >= 600) {
+                    position++;
+                    bottom--;
+                    circle.style.top = bottom + "px"
+                    if (bottom == 100) {
+                        clearInterval();
+                    }
+                }
+                else {
+                    position++;
+                    circle.style.top = position + "px"
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

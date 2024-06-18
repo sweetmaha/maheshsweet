@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+</head>
+<div id="pop"></div>
+<button>click</button>
+<script>
+   $(document).ready(function()
+{
+    $('button').click(function()
+{
+    $.ajax({
+        type:'POST',
+        url:'lol.php',
+        data:{'username':'maha','age':25},
+        dataType:'json',
+        success:function(pop)
+        {
+            console.log(pop);
+            $('#pop').append(`<b>name</b>:${pop.data.age}`);
+            $('#pop').append(`<b>age</b>:${pop.data.age}`);
+
+        },
+        error:function(xhr,status,error)
+        {
+            console.log(xhr)
+        }
+
+    })
+})
+})
+</script>
+</body>
+</html>

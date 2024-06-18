@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="C:\Users\scope\Downloads\ma\jquery.js"></script>
+    <style>
+        #maja{
+            border: 2px solid black;
+            height: 450px;
+            width: 150px;
+            background-color: black;
+            border-radius: 20px;
+ 
+            display: flex;
+
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            margin-left: 250px;
+            
+        }
+        #no{
+            height: 180px;
+            width: 50px;
+            background-color: black;
+            margin-left: 300px;
+        }
+        #red{
+            height: 100px;
+            width: 80px;
+            background-color: darkred;
+            border-radius: 150px;
+        }
+        #yellow{
+            height: 100px;
+            width: 80px;
+            background-color: yellow;
+            border-radius: 150px;
+        }
+        #green{
+            height: 100px;
+            width: 80px;
+            background-color:green;
+            border-radius: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div id="maja">
+        <div id="red"></div>
+        <div id="yellow"></div>
+        <div id="green"></div>
+    </div>
+    <div id="no"></div>
+    <div id="hh"><br>
+        <button>click</button>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+              
+                $("#yellow").fadeOut(1000)
+                $("#green").fadeOut(1000)
+
+                $("#red").delay(4000).fadeOut(1000)
+                $("#yellow").delay(4000).fadeIn(1000).delay(4000).fadeOut(1000)
+                $("#green").delay(10000).fadeIn(1000).delay(4000).fadeout(1000)
+
+
+
+            })
+        })
+    </script>
+    
+</body>
+</html>

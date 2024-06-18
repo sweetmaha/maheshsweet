@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
+    <style>
+       .s{
+        border: 20px solid red;
+        height: 200px;
+        width: 200px;
+        padding: 20px;
+        background-color: yellow;
+       }
+    </style>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script> -->
+</head>
+
+<body>
+    <div id="div1" class="s">
+    hello content from <b>div</b>
+        <input type="text" id="inp" >
+    </div>
+    <button id="animate">animate</button>
+    
+    <script>
+   $(document).ready(function()
+{
+    $('button').click(function()
+{
+   var a=$('#div1').innerWidth();
+   
+alert(a)
+   
+   
+})
+ 
+})
+    </script>
+</body>
+</html>

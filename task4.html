@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        border: 2px solid black;
+        height: 500px;
+        width: 60%;
+        background-color: antiquewhite;
+        position: relative;
+    }
+    .box1{
+        background: rgb(43, 255, 0);
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            border-radius: 150px
+          
+    }
+</style>
+<body>
+    <div class="box">
+        <div class="box1"></div>
+
+    </div> <br> <br>
+    <button onclick="love()">click</button>
+    <script>
+        function love(){
+            let interval=null;
+          var circle = document.getElementById("box1")
+            let position=0;
+            let bottom=450;
+            interval=setInterval(frame,3);
+
+            function frame(){
+                if(position>=450){
+                    position++;
+                    bottom--;
+                    circle.style.top=bottom+"px"
+                }
+                else{
+                    position++;
+                    circle.style.left=position+"px";
+                    circle.style.bottom=position+"px";
+
+
+                }
+            }
+        }
+    </script>
+</body>
+</html>
